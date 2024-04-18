@@ -1,0 +1,77 @@
+.button {
+	display: block;
+	width: 100%;
+	padding: 18px 0px;
+
+	font-family: $primary-font;
+	font-size: 16px;
+	line-height: 0.7;
+	font-weight: 500;
+	text-align: center;
+	color: $white;
+
+	background-color: $black-button;
+	border-radius: 66px;
+
+	cursor: pointer;
+
+	@media (min-width: $tablet-width) {
+		padding: 14px 49px 14px 49px;
+
+		line-height: 1.3;
+	}
+
+	&:hover {
+		color: $black-text;
+
+		background-color: $yellow;
+	}
+
+	&:active {
+		opacity: 0.6;
+	}
+
+	&:focus-visible {
+		outline: 2px solid $white;
+	}
+}
+
+.button--light {
+	color: $black-button;
+
+	background-color: $transparent-button;
+
+	@media (min-width: $desktop-width) {
+		background-color: $transparent;
+		border: 2px solid $black-button;
+	}
+
+	&:hover {
+		color: $white;
+
+		background-color: $black-button;
+	}
+}
+
+.button--trans {
+	width: fit-content;
+	margin: 0 auto;
+	padding: 8px 11px;
+
+	line-height: 1;
+	color: $blue;
+
+	background-color: $transparent;
+	border: 1px solid $blue;
+
+	&:hover {
+		color: $white;
+
+		background-color: $blue;
+	}
+
+	&:focus-visible {
+		outline: 2px solid $black-button;
+	}
+}
+

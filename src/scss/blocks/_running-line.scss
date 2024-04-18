@@ -1,0 +1,45 @@
+.running-line {
+	position: relative;
+
+	width: 100%;
+	padding: 19px 0 19px 0;
+
+	font-family: $secondary-font;
+	font-size: 16px;
+	line-height: 1.1;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: $white;
+
+	background-color: $red;
+	overflow: hidden;
+
+	@media (min-width: $tablet-width) {
+		padding: 30px 0 30px 0;
+
+		font-size: 22px;
+	}
+}
+
+.running-line__text {
+  position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+
+	margin: 0;
+
+  white-space: nowrap;
+
+	&--decor {
+		display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: -2px 12px 0;
+
+		vertical-align: middle;
+
+    border-radius: 50%;
+    background-color: $white;
+
+	}
+}

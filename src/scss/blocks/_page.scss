@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+.page {
+  height: 100%;
+
+	scroll-behavior: smooth;
+}
+
+.page__body {
+	display: grid;
+	grid-template-rows: min-content 1fr min-content;
+	min-height: 100%;
+	margin: 0;
+
+	font-family: $primary-font;
+	font-size: 18px;
+	line-height: 1.2;
+	font-weight: 400;
+	color: $black-text; 
+
+	@media (min-width: $tablet-width) {
+		font-size: 20px;
+	}
+}
