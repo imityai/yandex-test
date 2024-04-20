@@ -36,7 +36,11 @@
 		]
 	},
 	"browserslist": [
-		"last 5 versions"
+		"last 5 versions",
+		"not dead",
+    "not op_mini all",
+    "not and_uc > 0",
+    "not < 0.2%"
 	],
 	"dependencies": {
 		"air-datepicker": "^3.4.0"
