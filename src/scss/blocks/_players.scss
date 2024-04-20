@@ -46,6 +46,7 @@
 	margin: 0 auto 27px;
 
 	background-color: $beige-background;
+	background-image: url("../img/avatar-bg--mob@2x.jpg");
 	background-image: image-set(
     url("../img/avatar-bg--mob@1x.webp") type("image/webp") 1x,
     url("../img/avatar-bg--mob@2x.webp") type("image/webp") 2x,
@@ -60,7 +61,8 @@
 		width: 320px;
 		height: 320px;
 		margin: 0 auto 28px;
-
+		
+		background-image: url("../img/avatar-bg--pc@2x.jpg");
 		background-image: image-set(
     url("../img/avatar-bg--pc@1x.webp") type("image/webp") 1x,
     url("../img/avatar-bg--pc@2x.webp") type("image/webp") 2x,

@@ -50,6 +50,7 @@
     width: 340px;
     height: 215px;
 
+		background-image: url("../img/plane--mob@2x.png");
 		background-image: image-set(
 			url("../img/plane--mob@1x.webp") type("image/webp") 1x,
 			url("../img/plane--mob@2x.webp") type("image/webp") 2x,
@@ -70,6 +71,7 @@
 			width: 399px;
 			height: 235px;
 
+			background-image: url("../img/plane--pc@2x.png");
 			background-image: image-set(
 			url("../img/plane--pc@1x.webp") type("image/webp") 1x,
 			url("../img/plane--pc@2x.webp") type("image/webp") 2x,
@@ -108,6 +110,7 @@
 	padding: 62px 24px 66px 72px;
 
 	background-color: $beige-background;
+	background-image: url("../img/steps-bg--mob@2x.jpg");
 	background-image: image-set(
     url("../img/steps-bg--mob@1x.webp") type("image/webp") 1x,
     url("../img/steps-bg--mob@2x.webp") type("image/webp") 2x,
@@ -122,6 +125,7 @@
 	@media (min-width: $desktop-width) {
 		padding: 20px 21px 20px 72px;
 
+		background-image: url("../img/steps-bg-1--pc@2x.jpg");
 		background-image: image-set(
 			url("../img/steps-bg-1--pc@1x.webp") type("image/webp") 1x,
 			url("../img/steps-bg-1--pc@2x.webp") type("image/webp") 2x,
@@ -138,6 +142,7 @@
 	}
 
 	&:nth-child(6) {
+		background-image: url("../img/steps-bg-2--pc@2x.jpg");
 		background-image: image-set(
 			url("../img/steps-bg-2--pc@1x.webp") type("image/webp") 1x,
 			url("../img/steps-bg-2--pc@2x.webp") type("image/webp") 2x,
@@ -151,6 +156,7 @@
 			grid-column: span 2;
 			padding-right: 290px;
 
+			background-image: url("../img/steps-bg-2--pc@2x.jpg");
 			background-image: image-set(
 			url("../img/steps-bg-2--pc@1x.webp") type("image/webp") 1x,
 			url("../img/steps-bg-2--pc@2x.webp") type("image/webp") 2x,
