@@ -100,12 +100,19 @@ document.addEventListener("DOMContentLoaded", function() {
     touchEndX = event.touches[0].clientX;
   });
 
-  slides.addEventListener("touchend", () => {
-    if (touchEndX - touchStartX > 50) {
-      showPrevSlide();
-    } else if (touchStartX - touchEndX > 50) {
-      showNextSlide();
-    }
+	slides.addEventListener("touchend", () => {
+		const diffX = touchStartX - touchEndX;
+
+		if (diffX > 0) {
+			showPrevSlide();
+		} else {
+			showNextSlide();
+		}
+    // if (touchEndX - touchStartX > 50) {
+    //   showPrevSlide();
+    // } else if (touchStartX - touchEndX > 50) {
+    //   showNextSlide();
+    // }
   });
 
   function showPrevSlide() {
@@ -193,25 +200,31 @@ document.addEventListener("DOMContentLoaded", function() {
 	let touchStartX = 0;
 	let touchEndX = 0;
 
-	carousel.addEventListener("touchstart", (event) => {
+	slides.addEventListener("touchstart", (event) => {
 		touchStartX = event.touches[0].clientX;
 	});
 
-	carousel.addEventListener("touchmove", (event) => {
+	slides.addEventListener("touchmove", (event) => {
 		touchEndX = event.touches[0].clientX;
 	});
 
-	carousel.addEventListener("touchend", () => {
+	slides.addEventListener("touchend", () => {
 		const diffX = touchStartX - touchEndX;
-		const threshold = Math.abs(diffX);
+		// const threshold = Math.abs(diffX);
 
-		if (threshold > 50) {
-			if (diffX > 0) {
-				showNextSlide('next');
-			} else {
-				showNextSlide('prev');
-			}
+		if (diffX > 0) {
+			showNextSlide('next');
+		} else {
+			showNextSlide('prev');
 		}
+
+		// if (threshold > 50) {
+		// 	if (diffX > 0) {
+		// 		showNextSlide('next');
+		// 	} else {
+		// 		showNextSlide('prev');
+		// 	}
+		// }
 	});
 
 	nextButton.onclick = function () {
