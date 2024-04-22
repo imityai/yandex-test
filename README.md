@@ -2,7 +2,7 @@
 
 [Посмотреть](https://imityai.github.io/yandex-test/)
 
-**Технологии
+## Технологии
 
 * HTML, SCSS, JS
 * Gulp
