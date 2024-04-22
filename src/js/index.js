@@ -197,8 +197,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	updateNumbers();
 
-	let touchStartX = 0;
-	let touchEndX = 0;
+	let touchStartX;
+	let touchEndX;
 
 	slides.addEventListener("touchstart", (event) => {
 		touchStartX = event.touches[0].clientX;
@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 	slides.addEventListener("touchend", () => {
-		let diffX = Math.abs(touchStartX - touchEndX);
+		let diffX = touchStartX - touchEndX;
 
 		if (diffX > 0) {
 			showNextSlide('next');
@@ -217,8 +217,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			showNextSlide('prev');
 		}
 
-		touchStartX = 0;
-    touchEndX = 0;
+		touchStartX = null;
+    touchEndX = null;
 	});
 
 	nextButton.onclick = function () {
