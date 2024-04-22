@@ -145,8 +145,12 @@ document.addEventListener("DOMContentLoaded", function() {
 		updateNumbers();
 	}
 
-	function showNextSlide() {
-		slideIndex = (slideIndex + (window.innerWidth >= 1200 ? 3 : window.innerWidth >= 768 ? 2 : 1)) % slidesArray.length;
+	function showNextSlide(direction) {
+		if (direction === 'next') {
+			slideIndex = (slideIndex + (window.innerWidth >= 1200 ? 3 : window.innerWidth >= 768 ? 2 : 1)) % slidesArray.length;
+	} else if (direction === 'prev') {
+			slideIndex = (slideIndex - (window.innerWidth >= 1200 ? 3 : window.innerWidth >= 768 ? 2 : 1) + slidesArray.length) % slidesArray.length;
+	}
 		updateCarousel();
 	}
 
@@ -203,26 +207,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
 		if (threshold > 50) {
 			if (diffX > 0) {
-				showNextSlide();
+				showNextSlide('next');
 			} else {
-				slideIndex = slideIndex > 0 ? slideIndex - 1 : slidesArray.length - 1;
-				updateCarousel();
+				showNextSlide('prev');
 			}
 		}
 	});
 
-	nextButton.addEventListener("click", (event) => {
-		event.stopPropagation();
-		if (!event.clientX) {
-			showNextSlide();
-		}
-	});
+	nextButton.onclick = function () {
+		showNextSlide('next');
+	};
 
-	prevButton.addEventListener("click", (event) => {
-    event.stopPropagation();
-    if (!event.clientX) {
-        slideIndex = slideIndex > 0 ? slideIndex - 1 : slidesArray.length - 1;
-        updateCarousel();
-    }
-	});
+	prevButton.onclick = function () {
+		showNextSlide('prev');
+	}
 });
