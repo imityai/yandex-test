@@ -104,9 +104,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		const diffX = touchStartX - touchEndX;
 
 		if (diffX > 0) {
-			showPrevSlide();
-		} else {
 			showNextSlide();
+		} else {
+			showPrevSlide();
 		}
     // if (touchEndX - touchStartX > 50) {
     //   showPrevSlide();
@@ -209,22 +209,13 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 	slides.addEventListener("touchend", () => {
-		const diffX = touchStartX - touchEndX;
-		// const threshold = Math.abs(diffX);
+		let diffX = touchStartX - touchEndX;
 
 		if (diffX > 0) {
 			showNextSlide('next');
 		} else {
 			showNextSlide('prev');
 		}
-
-		// if (threshold > 50) {
-		// 	if (diffX > 0) {
-		// 		showNextSlide('next');
-		// 	} else {
-		// 		showNextSlide('prev');
-		// 	}
-		// }
 	});
 
 	nextButton.onclick = function () {
