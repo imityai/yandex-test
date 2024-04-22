@@ -216,6 +216,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		} else {
 			showNextSlide('prev');
 		}
+
+		touchStartX = 0;
+    touchEndX = 0;
 	});
 
 	nextButton.onclick = function () {
