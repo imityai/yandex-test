@@ -193,26 +193,28 @@ document.addEventListener("DOMContentLoaded", function() {
 	let touchStartX;
 	let touchEndX;
 
-	slidesArray.addEventListener("touchstart", (event) => {
-		touchStartX = event.touches[0].clientX;
-	});
+	slidesArray.forEach(slide => {
+    slide.addEventListener("touchstart", (event) => {
+        touchStartX = event.touches[0].clientX;
+    });
 
-	slidesArray.addEventListener("touchmove", (event) => {
-		touchEndX = event.touches[0].clientX;
-	});
+    slide.addEventListener("touchmove", (event) => {
+        touchEndX = event.touches[0].clientX;
+    });
 
-	slidesArray.addEventListener("touchend", () => {
-		let diffX = touchStartX - touchEndX;
+    slide.addEventListener("touchend", () => {
+        let diffX = touchStartX - touchEndX;
 
-		if (diffX > 0) {
-			showNextSlide('next');
-		} else {
-			showNextSlide('prev');
-		}
+        if (diffX > 0) {
+            showNextSlide('next');
+        } else {
+            showNextSlide('prev');
+        }
 
-		touchStartX = null;
-    touchEndX = null;
-	});
+        touchStartX = null;
+        touchEndX = null;
+    });
+});
 
 	nextButton.onclick = function () {
 		showNextSlide('next');
