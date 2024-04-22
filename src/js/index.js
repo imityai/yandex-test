@@ -105,9 +105,9 @@ document.addEventListener("DOMContentLoaded", function() {
         let diffX = touchStartX - touchEndX;
 
         if (diffX > 0) {
-            showNextSlide;
+            showNextSlide();
         } else {
-            showPrevSlide;
+            showPrevSlide();
         }
 
         touchStartX = null;
