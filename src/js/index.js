@@ -101,18 +101,11 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 	slides.addEventListener("touchend", () => {
-		const diffX = touchStartX - touchEndX;
-
-		if (diffX > 0) {
-			showNextSlide();
-		} else {
-			showPrevSlide();
-		}
-    // if (touchEndX - touchStartX > 50) {
-    //   showPrevSlide();
-    // } else if (touchStartX - touchEndX > 50) {
-    //   showNextSlide();
-    // }
+		if (touchEndX - touchStartX > 50) {
+      showPrevSlide();
+    } else if (touchStartX - touchEndX > 50) {
+      showNextSlide();
+    }
   });
 
   function showPrevSlide() {
