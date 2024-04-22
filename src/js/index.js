@@ -193,15 +193,15 @@ document.addEventListener("DOMContentLoaded", function() {
 	let touchStartX;
 	let touchEndX;
 
-	slides.addEventListener("touchstart", (event) => {
+	slidesArray.addEventListener("touchstart", (event) => {
 		touchStartX = event.touches[0].clientX;
 	});
 
-	slides.addEventListener("touchmove", (event) => {
+	slidesArray.addEventListener("touchmove", (event) => {
 		touchEndX = event.touches[0].clientX;
 	});
 
-	slides.addEventListener("touchend", () => {
+	slidesArray.addEventListener("touchend", () => {
 		let diffX = touchStartX - touchEndX;
 
 		if (diffX > 0) {
