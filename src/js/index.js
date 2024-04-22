@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 	slides.addEventListener("touchend", () => {
-		let diffX = touchStartX - touchEndX;
+		let diffX = Math.abs(touchStartX - touchEndX);
 
 		if (diffX > 0) {
 			showNextSlide('next');
